@@ -1,49 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>About Us</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Media Production</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-    <div class="top">
-        <h1>About Our Services</h1>
-        <div class="nav">
+    <header class="header">
+        <div class="logo">
+            <h1>Media Production</h1>
+        </div>
+        <nav class="nav">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html" class="active">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="team-section">
+            <div class="container">
+                <h2>Our Team</h2>
+                <p class="section-description">
+                    We are a team of experienced media professionals dedicated to creating high-quality content.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section - Using Flexbox/Grid -->
+        <section class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Video Production</h3>
+                        <p>Professional video creation for corporate, commercial, and creative projects.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Audio Recording</h3>
+                        <p>Studio-quality audio production, voice-overs, and sound design services.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Multimedia Solutions</h3>
+                        <p>Complete digital content packages including editing, motion graphics, and distribution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section - CSS Grid Gallery -->
+        <section class="portfolio-section">
+            <div class="container">
+                <h2>Our Portfolio</h2>
+                <div class="portfolio-grid">
+
+                    <figure class="portfolio-item">
+                        <img src="images/john-matychuk-gUK3lA3K7Yo-unsplash.jpg"
+                            alt="Professional video production project showcasing corporate branding">
+                        <figcaption>Corporate Video Production</figcaption>
+                    </figure>
+
+                    <figure class="portfolio-item">
+                        <img src="images/mohammad-metri-1oKxSKSOowE-unsplash.jpg"
+                            alt="Creative commercial video production">
+                        <figcaption>Creative Commercial</figcaption>
+                    </figure>
+
+                    <figure class="portfolio-item">
+                        <img src="images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg"
+                            alt="High-quality audio recording and sound design project">
+                        <figcaption>Studio Audio Recording</figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Email: contact@mediaproduction.com</p>
+            <p>Phone: 555-0123</p>
+            <p>&copy; 2026 Media Production. All rights reserved.</p>
         </div>
-    </div>
-    
-    <div>
-        <h2>Our Team</h2>
-        <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
-    </div>
-    
-    <div>
-        <h2>Services</h2>
-        <!-- Flexbox layout should be here but using basic divs -->
-        <div>
-            <h3>Video Production</h3>
-            <p>Professional video creation for corporate and creative projects.</p>
-        </div>
-        <div>
-            <h3>Audio Recording</h3>
-            <p>Studio-quality audio production and editing services.</p>
-        </div>
-        <!-- Missing third service -->
-    </div>
-    
-    <div>
-        <h2>Portfolio</h2>
-        <!-- Grid gallery missing - just basic layout -->
-        <img src="images/work1.jpg">
-        <img src="images/work2.jpg">
-        <img src="images/work3.jpg">
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
 </body>
+
 </html>
