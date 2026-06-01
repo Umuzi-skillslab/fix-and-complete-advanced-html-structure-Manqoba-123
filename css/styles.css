@@ -271,10 +271,17 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+.t-t   { grid-area: lead; }
+.t-t1 { grid-area: side1; }
+.t-t2 { grid-area: side2; }
+
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  grid-template-areas:
+    "lead"
+    "side1"
+    "side2";
   margin-top: 2rem;
 }
 
@@ -499,6 +506,13 @@ section {
   .hero p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "lead side1"
+      "lead side2";
   }
 
   .cta-button {
