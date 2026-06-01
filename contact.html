@@ -34,18 +34,22 @@
                         <legend>Personal Information</legend>
 
                         <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required minlength="3"
-                            maxlength="100" aria-describedby="name-hint">
-                        <span class="error-hint" id="name-hint">Name must be at least 3 characters long.</span>
+                        <input type="text" id="name" name="name" placeholder=" " required minlength="3" maxlength="100"
+                            pattern="[A-Za-z\s]+" aria-describedby="name-hint">
+                        <span class="error-hint" id="name-hint">Name must be at least 3 characters and contain letters
+                            only.</span>
 
                         <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required aria-describedby="email-hint">
-                        <span class="error-hint" id="email-hint">Please supply a valid email address (e.g., name@domain.com).</span>
+                        <input type="email" id="email" name="email" placeholder=" " required
+                            aria-describedby="email-hint">
+                        <span class="error-hint" id="email-hint">Please supply a valid email address (e.g.,
+                            name@domain.com).</span>
 
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+27 12 345 6789"
-                            pattern="^\+?[0-9\s-]{10,15}$" aria-describedby="phone-hint">
-                        <span class="error-hint" id="phone-hint">Accepts 10 to 15 digits. Country codes optional.</span>
+                        <input type="tel" id="phone" name="phone" placeholder=" " minlength="10" maxlength="15" pattern="^\+?[0-9\s-]{10,15}$"
+                            aria-describedby="phone-hint">
+                        <span class="error-hint" id="phone-hint">Accepts 10 to 15 digits only. No letters
+                            allowed.</span>
 
                         <label for="company">Company / Organization</label>
                         <input type="text" id="company" name="company" placeholder="Your company name">
@@ -86,8 +90,10 @@
                         <legend>Project Details</legend>
 
                         <label for="budget">Approximate Budget (ZAR)</label>
-                        <input type="number" id="budget" name="budget" placeholder="50000" min="10000" step="1000" aria-describedby="budget-hint">
-                        <span class="error-hint" id="budget-hint">Minimum threshold must be R10,000 or greater, using steps of 1000.</span>
+                        <input type="number" id="budget" name="budget" placeholder="50000" min="10000" step="1000"
+                            aria-describedby="budget-hint">
+                        <span class="error-hint" id="budget-hint">Minimum threshold must be R10,000 or greater, using
+                            steps of 1000.</span>
 
                         <label for="deadline">Preferred Deadline</label>
                         <input type="date" id="deadline" name="deadline">
@@ -113,10 +119,10 @@
                         </div>
 
                         <label for="message">Tell us more about your project <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="7"
-                            placeholder="Describe your project, goals, target audience, etc." required
-                            minlength="20" aria-describedby="message-hint"></textarea>
-                        <span class="error-hint" id="message-hint">Please provide a context summary of at least 20 characters.</span>
+                        <textarea id="message" name="message" rows="7" placeholder=" " required minlength="20"
+                            aria-describedby="message-hint"></textarea>
+                        <span class="error-hint" id="message-hint">Please provide a context summary of at least 20
+                            characters.</span>
                     </fieldset>
 
                     <button type="submit">Send Message</button>

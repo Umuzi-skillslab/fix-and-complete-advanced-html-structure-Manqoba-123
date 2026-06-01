@@ -271,9 +271,15 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.t-t   { grid-area: lead; }
-.t-t1 { grid-area: side1; }
-.t-t2 { grid-area: side2; }
+.t-t {
+  grid-area: lead;
+}
+.t-t1 {
+  grid-area: side1;
+}
+.t-t2 {
+  grid-area: side2;
+}
 
 .testimonials-grid {
   display: grid;
@@ -297,6 +303,10 @@ section {
   transform: translateY(-8px);
 }
 
+.portfolio-grid .portfolio-item:nth-child(even) {
+  background-color: #e09e9e;
+}
+
 .testimonial-card img {
   width: 100px;
   height: 100px;
@@ -316,11 +326,16 @@ section {
   opacity: 0.85;
 }
 
-.contact-form input, 
-.contact-form select, 
+.contact-form input,
+.contact-form select,
 .contact-form textarea {
   margin-bottom: 1.2rem;
 }
+
+.contact-form fieldset > input[type="text"] {
+  border-left: 3px solid #333;
+}
+
 .contact-section {
   background-color: #111111;
   padding: 100px 5%;
@@ -393,6 +408,33 @@ section {
   background-color: #333;
 }
 
+.contact-form input:focus + label,
+.contact-form textarea:focus + label {
+  font-weight: 700;
+}
+
+.contact-form input:required,
+.contact-form textarea:required {
+  border-left-color: #ebdbdb;
+}
+
+.contact-form input:not(:placeholder-shown):valid,
+.contact-form textarea:not(:placeholder-shown):valid {
+  border-color: #00ff9d;
+  box-shadow: 0 0 0 3px rgba(0, 255, 157, 0.15);
+}
+
+.contact-form input:not(:placeholder-shown):invalid,
+.contact-form textarea:not(:placeholder-shown):invalid {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+}
+
+.contact-form input:not(:placeholder-shown):valid + .error-hint,
+.contact-form textarea:not(:placeholder-shown):valid + .error-hint {
+  display: none;
+}
+
 /* Radio & Checkbox Group */
 .radio-group,
 .checkbox-group {
@@ -450,6 +492,10 @@ section {
 .footer p {
   margin: 8px 0;
   color: #888;
+}
+
+.footer a:visited {
+  color: #a0a0a0;
 }
 
 /* ===================== ANIMATIONS ===================== */
@@ -521,12 +567,12 @@ section {
   }
 
   .contact-form {
-        padding: 2rem 1.5rem;
-    }
-    
-    .contact-form fieldset {
-        padding: 1.5rem 1.5rem;
-    }
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-form fieldset {
+    padding: 1.5rem 1.5rem;
+  }
 }
 
 /* Extra small screens */
