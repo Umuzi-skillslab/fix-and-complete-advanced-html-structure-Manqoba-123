@@ -299,6 +299,20 @@ section {
 }
 
 /* ===================== CONTACT PAGE ===================== */
+.error-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: #ff4d4d;
+  margin-top: -1rem;
+  margin-bottom: 1.2rem;
+  opacity: 0.85;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+  margin-bottom: 1.2rem;
+}
 .contact-section {
   background-color: #111111;
   padding: 100px 5%;
